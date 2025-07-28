@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard API</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <h1>🌐 Mon Dashboard</h1>
+ <div class="dashboard">
+ 	<button id="toggleTheme">🌓 Thème</button>
+
+  	<div class="card" id="github">
+    <h2>🔍 Rechercher un utilisateur GitHub</h2>
+    <input type="text" id="githubUser" placeholder="Ex : torvalds">
+    <div>
+      <button onclick="loadGitHub()">Voir le profil</button>
+      <button onclick="loadRandomUser()">🔄 Aléatoire</button>
+    </div>
+    <div id="githubStats">Aucune donnée chargée.</div>
+  </div>
+  <div class="card" id="crypto">
+    <div id="cryptoContent">
+      <h2>Chargement...</h2>
+    </div>
+    <p><button onclick="loadRandomCrypto()">🔄 Nouvelle Crypto</button></p>
+    <canvas id="cryptoChart" width="300" height="150"></canvas>
+  </div>
+
+	<div class="search">
+    <input type="text" id="cityInput" placeholder="Entrez une ville">
+    <button onclick="getWeather()">Rechercher</button>
+  </div>
+
+  <div class="main-content">
+    <div id="weatherResult" class="card"></div>
+    <div>
+      <canvas id="tempChart" width="600" height="200" style="margin: auto;"></canvas>
+      <h2>Prévisions sur 7 jours</h2>
+      <div id="forecast" class="forecast-container"></div>
+    </div>
+  </div>
+
+</body>
+</html>
